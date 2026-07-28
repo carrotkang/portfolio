@@ -34,6 +34,11 @@ export const projects = [
         url: 'https://www.figma.com/board/EoXeIHtbOKuQUpiLbApMeH/OTT?node-id=0-1&t=Lx00cT5FTRdjd0P0-1',
       },
       {
+        label: '발표자료',
+        type: 'presentation',
+        url: 'https://github.com/4flex-ott/teamproject_ott/blob/develop/4flex.pdf',
+      },
+      {
         label: 'Docker Hub',
         type: 'docker',
         url: 'https://hub.docker.com/r/carrotkang/flask-4flex',
@@ -73,6 +78,11 @@ export const projects = [
         label: 'Figma',
         type: 'figma',
         url: 'https://www.figma.com/design/Szki3Fravfdu0Db5D6FKlh/3minute?node-id=0-1&t=8mkMAovIKjr7Hib8-1',
+      },
+      {
+        label: '발표자료',
+        type: 'presentation',
+        url: 'https://github.com/3minute-team/3minute-emergency/blob/main/3minute-emergency.pdf',
       },
       {
         label: 'Hugging Face',
