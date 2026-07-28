@@ -1,0 +1,214 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+@import "tailwindcss";
+
+:root {
+  font-family: Pretendard, "Noto Sans KR", system-ui, sans-serif;
+  color: #111827;
+  background: #f6f8fc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: clip;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  color: #f8fafc;
+  background: #2563eb;
+}
+
+.site-shell {
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.section-space {
+  padding-block: clamp(5rem, 10vw, 8.5rem);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #2563eb;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  width: 1.8rem;
+  height: 1px;
+  content: "";
+  background: currentColor;
+}
+
+.display {
+  font-family: Pretendard, "Noto Sans KR", system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  text-wrap: balance;
+}
+
+.paper-grid {
+  background-image:
+    linear-gradient(rgba(37, 99, 235, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.055) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.site-header-enter {
+  animation: site-header-enter 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-enter {
+  opacity: 0;
+  animation-duration: 850ms;
+  animation-delay: var(--hero-delay, 0ms);
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.hero-enter--up {
+  animation-name: hero-enter-up;
+}
+
+.hero-enter--left {
+  animation-name: hero-enter-left;
+}
+
+.hero-enter--right {
+  animation-name: hero-enter-right;
+}
+
+@keyframes site-header-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -24px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes hero-enter-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 48px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes hero-enter-left {
+  from {
+    opacity: 0;
+    transform: translate3d(-44px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes hero-enter-right {
+  from {
+    opacity: 0;
+    transform: translate3d(56px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.scroll-reveal {
+  opacity: 0;
+  filter: blur(2px);
+  transition:
+    opacity 500ms ease,
+    filter 500ms ease,
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: 0ms;
+  will-change: opacity, filter, transform;
+}
+
+.scroll-reveal--up {
+  transform: translate3d(0, 48px, 0);
+}
+
+.scroll-reveal--left {
+  transform: translate3d(-56px, 0, 0);
+}
+
+.scroll-reveal--right {
+  transform: translate3d(56px, 0, 0);
+}
+
+.scroll-reveal--visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate3d(0, 0, 0);
+  transition-delay: var(--reveal-delay);
+}
+
+@media (max-width: 640px) {
+  .site-shell {
+    width: min(100% - 28px, 1180px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .scroll-reveal {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+
+  .site-header-enter,
+  .hero-enter {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
