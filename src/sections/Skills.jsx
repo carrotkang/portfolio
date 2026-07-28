@@ -7,7 +7,11 @@ export default function Skills() {
   return (
     <section id="skills" className="section-space">
       <div className="site-shell">
-        <SectionTitle label="Skills" title="기술은 문제를 푸는 도구입니다." description="숙련도를 막대로 표현하는 대신, 각 기술을 어떤 맥락에서 사용하는지 설명합니다." />
+        <SectionTitle
+          label="Skills"
+          title="프로젝트에 필요한 기술을 연결합니다."
+          description="직접 활용한 기술과 각 기술로 해결한 문제를 중심으로 정리했습니다."
+        />
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {skillGroups.map((group, index) => (
             <ScrollReveal key={group.category} direction="up" delay={index * 90}>

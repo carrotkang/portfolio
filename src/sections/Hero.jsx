@@ -40,7 +40,10 @@ export default function Hero() {
           <div className="flex h-full flex-col justify-between rounded-[9rem_9rem_1.25rem_1.25rem] border border-white/25 p-7">
             <span className="self-center text-xs font-black tracking-[0.2em]">PORTFOLIO / 26</span>
             <div>
-              <p className="display text-5xl font-bold">Kang<br />Gyeonggeun</p>
+              <p className="display text-[clamp(2.25rem,10vw,2.75rem)] font-bold leading-[0.95]">
+                <span className="block whitespace-nowrap">Kang</span>
+                <span className="block whitespace-nowrap">Gyeonggeun</span>
+              </p>
               <a href="#contact" className="mt-7 inline-flex items-center gap-2 text-sm font-bold">
                 함께 이야기하기 <ArrowUpRight size={16} />
               </a>
