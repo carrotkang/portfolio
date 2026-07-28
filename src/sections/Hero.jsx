@@ -4,12 +4,12 @@ export default function Hero() {
   return (
     <section id="top" className="paper-grid relative overflow-hidden border-b border-[#111827]/10">
       <div className="site-shell grid min-h-[calc(100svh-6.75rem)] items-center gap-12 py-20 lg:grid-cols-[1.4fr_0.6fr]">
-        <div className="relative z-10">
+        <div className="relative z-10 min-w-0">
           <p className="hero-enter hero-enter--left eyebrow [--hero-delay:120ms]">
             Web · Backend · AI
           </p>
           <h1
-            className="display mt-7 max-w-4xl text-[clamp(3.4rem,8.5vw,7.7rem)] font-bold leading-[0.88]"
+            className="display mt-7 max-w-4xl text-[clamp(2.75rem,13vw,7.7rem)] font-bold leading-[0.9] sm:leading-[0.88]"
             aria-label="끝까지 구현하는 개발자 강경근"
           >
             <span className="block overflow-hidden pb-[0.06em]">
@@ -36,7 +36,7 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        <aside className="hero-enter hero-enter--right relative mx-auto aspect-[4/5] w-full max-w-sm rounded-[10rem_10rem_2rem_2rem] bg-[#2563eb] p-5 text-[#f8fafc] shadow-[18px_18px_0_#c9d7f4] [--hero-delay:360ms]">
+        <aside className="hero-enter hero-enter--right relative mx-auto aspect-[4/5] w-full min-w-0 max-w-sm rounded-[10rem_10rem_2rem_2rem] bg-[#2563eb] p-5 text-[#f8fafc] shadow-[18px_18px_0_#c9d7f4] [--hero-delay:360ms]">
           <div className="flex h-full flex-col justify-between rounded-[9rem_9rem_1.25rem_1.25rem] border border-white/25 p-7">
             <span className="self-center text-xs font-black tracking-[0.2em]">PORTFOLIO / 26</span>
             <div>

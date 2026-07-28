@@ -8,7 +8,7 @@ export default function About() {
         <SectionTitle label="About me" title={<>기능 너머의 <span className="text-[#7c3aed]">이유</span>를 찾습니다.</>} />
         <div className="grid items-stretch gap-10 lg:grid-cols-2 lg:gap-24">
           <ScrollReveal direction="left" className="flex min-h-64 flex-col justify-between">
-            <p className="text-2xl font-bold leading-[1.55]">
+            <p className="break-keep text-xl font-bold leading-[1.6] sm:text-2xl sm:leading-[1.55]">
               약 7년간의 F&B 매장 운영과 웹 개발, 제조 공정이라는 서로 다른
               현장에서 문제를 발견하고 개선해 온 경험을 기술로 연결합니다.
             </p>

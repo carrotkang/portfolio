@@ -16,7 +16,7 @@ export default function Header() {
   return (
     <header className="site-header-enter sticky top-0 z-40 border-b border-[#111827]/10 bg-[#f6f8fc]/90 backdrop-blur-xl">
       <div className="bg-[#111827] text-white">
-        <div className="site-shell flex h-9 items-center justify-end gap-4 text-[0.7rem] font-semibold sm:gap-6 sm:text-xs">
+        <div className="site-shell flex h-9 items-center justify-end gap-3 text-[0.625rem] font-semibold min-[360px]:gap-4 min-[360px]:text-[0.7rem] sm:gap-6 sm:text-xs">
           <a
             href="mailto:carrotkang@gmail.com"
             onClick={() => trackEvent('contact_click', { contact_type: 'header_email' })}

@@ -9,7 +9,7 @@ export default function ProjectCard({ project, index, onSelect }) {
       <button
         type="button"
         onClick={() => onSelect(project)}
-        className={`relative min-h-72 overflow-hidden p-8 text-left ${project.color}`}
+        className={`relative min-h-72 overflow-hidden p-7 text-left sm:p-8 ${project.color}`}
         aria-label={`${project.title} 상세 보기`}
       >
         <div className="flex items-center justify-between gap-3">
@@ -30,14 +30,18 @@ export default function ProjectCard({ project, index, onSelect }) {
         </div>
         <div className="absolute -right-12 -top-12 size-48 rounded-full border-[30px] border-white/10" />
       </button>
-      <div className="flex flex-col justify-between p-7 sm:p-10">
+      <div className="flex flex-col justify-between p-6 sm:p-10">
         <div>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-bold uppercase tracking-wider text-[#111827]/45">
             <span>{project.period}</span>
             <span>{project.team}</span>
           </div>
-          <h3 className="mt-5 text-2xl font-extrabold">{project.summary}</h3>
-          <p className="mt-4 leading-7 text-[#111827]/65">{project.description}</p>
+          <h3 className="mt-5 break-keep text-[clamp(1.25rem,5.8vw,1.5rem)] font-extrabold leading-[1.35]">
+            {project.summary}
+          </h3>
+          <p className="mt-4 break-keep text-pretty text-[0.9375rem] leading-7 text-[#111827]/65 sm:text-base">
+            {project.description}
+          </p>
           <div className="mt-6 flex flex-wrap gap-2">
             {project.tech.map((item) => (
               <SkillBadge key={item} name={item} />
