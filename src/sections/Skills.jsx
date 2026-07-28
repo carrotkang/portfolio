@@ -22,6 +22,14 @@ export default function Skills() {
             </ScrollReveal>
           ))}
         </div>
+        <ScrollReveal
+          direction="up"
+          delay={120}
+          className="mt-6 border-l-2 border-[#2563eb] pl-5 text-sm leading-7 text-[#111827]/60"
+        >
+          Google Analytics 4로 페이지 조회, 프로젝트 상세 열기, 외부 링크와 연락처
+          클릭 이벤트를 추적하며 실제 사용자 흐름을 확인합니다.
+        </ScrollReveal>
       </div>
     </section>
   )
