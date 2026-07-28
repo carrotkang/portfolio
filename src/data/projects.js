@@ -117,6 +117,11 @@ export const projects = [
         url: 'https://www.figma.com/board/HtaQCEbJj15lC0XwdSzFo1/sportsmate-%EC%82%AC%EA%B3%BC%EC%A3%BC%EC%8A%A4-?node-id=0-1&t=ASTzkx7kBMQPCHkC-1',
       },
       {
+        label: '발표자료',
+        type: 'presentation',
+        url: 'https://github.com/sagwajusu/sportsmate/blob/main/docs/sportsmate-presentation.pdf',
+      },
+      {
         label: 'Docker Hub',
         type: 'docker',
         url: 'https://hub.docker.com/r/carrotkang/sportsmate-frontend',
