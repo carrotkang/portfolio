@@ -1,4 +1,4 @@
-import { Code2, ExternalLink, Package, Palette, X } from 'lucide-react'
+import { Code2, ExternalLink, FileDown, Package, Palette, X } from 'lucide-react'
 import { useEffect } from 'react'
 import SkillBadge from './SkillBadge'
 import { trackEvent } from '../lib/analytics'
@@ -8,6 +8,7 @@ const linkIcons = {
   figma: Palette,
   docker: Package,
   demo: ExternalLink,
+  presentation: FileDown,
 }
 
 export default function ProjectModal({ project, onClose }) {
@@ -40,6 +41,11 @@ export default function ProjectModal({ project, onClose }) {
                   {project.highlight}
                 </span>
               )}
+              {project.role && (
+                <span className="rounded-full bg-[#111827] px-3 py-1 text-[0.65rem] font-black tracking-[0.14em] text-white">
+                  TEAM LEADER
+                </span>
+              )}
             </div>
             <h2 id="project-modal-title" className="display mt-4 text-4xl font-bold sm:text-5xl">
               {project.title}
@@ -70,7 +76,7 @@ export default function ProjectModal({ project, onClose }) {
           </div>
           <div>
             <h3 className="text-sm font-black uppercase tracking-widest text-[#2563eb]">
-              나의 기여
+              나의 기여{project.role ? ` · ${project.role}` : ''}
             </h3>
             <p className="mt-3 leading-7">{project.contribution}</p>
           </div>
