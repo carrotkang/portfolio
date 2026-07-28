@@ -8,6 +8,21 @@ import {
 } from 'lucide-react'
 import ScrollReveal from './ScrollReveal'
 
+const languageRoles = [
+  {
+    language: 'JAVA',
+    role: '서비스 핵심 백엔드',
+    detail: 'Spring Boot · 인증 · 도메인 · API',
+    accent: 'border-[#fbbf24]/30 bg-[#fbbf24]/10 text-[#fde68a]',
+  },
+  {
+    language: 'PYTHON',
+    role: 'AI 추천·분석 서버',
+    detail: 'FastAPI · 추천 모델 · 감성 분석',
+    accent: 'border-[#60a5fa]/30 bg-[#60a5fa]/10 text-[#bfdbfe]',
+  },
+]
+
 const coreFeatures = [
   {
     icon: BookOpen,
@@ -33,9 +48,9 @@ const projectSteps = [
 ]
 
 const techStack = [
+  'Java 21 · Spring Boot',
+  'Python 3.12 · FastAPI',
   'React · TypeScript',
-  'Spring Boot',
-  'FastAPI',
   'PostgreSQL · pgvector',
   'Docker',
 ]
@@ -46,16 +61,16 @@ export default function WorkInProgress() {
       <aside className="grid overflow-hidden rounded-[2rem] bg-[#111827] text-white shadow-[0_24px_70px_rgba(17,24,39,0.16)] lg:grid-cols-[0.95fr_1.05fr]">
         <div className="flex flex-col justify-between p-8 sm:p-11">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-3 py-1.5 text-[0.65rem] font-black tracking-[0.16em] text-[#93c5fd]">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-3 py-1.5 text-[0.65rem] font-black tracking-[0.14em] text-[#93c5fd]">
               <span className="relative flex size-2">
                 <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#60a5fa] opacity-75" />
                 <span className="relative inline-flex size-2 rounded-full bg-[#60a5fa]" />
               </span>
-              NEXT PROJECT · SPEC READY
+              JAVA + PYTHON · AI FULL STACK
             </span>
 
             <p className="mt-8 text-xs font-black tracking-[0.16em] text-white/45">
-              요구사항·아키텍처 설계 완료
+              NEXT PROJECT · 요구사항·아키텍처 설계 완료
             </p>
             <h3 className="display mt-3 text-4xl font-bold leading-none sm:text-6xl">
               BookPick AI
@@ -63,10 +78,10 @@ export default function WorkInProgress() {
             <p className="display mt-4 text-xl font-bold leading-snug text-[#60a5fa] sm:text-2xl">
               AI 기반 개인화 도서 추천 서비스
             </p>
-            <p className="mt-6 max-w-xl text-pretty leading-7 text-white/60">
-              검색·조회·찜·좋아요 행동과 도서 리뷰를 분석해 취향에 맞는 책을
-              추천하고, 자연어로 책을 찾고 추천받을 수 있는 서비스를
-              설계했습니다.
+            <p className="mt-6 max-w-xl break-keep text-pretty leading-7 text-white/60">
+              Java·Spring Boot로 서비스의 핵심 백엔드와 API를 구현하고,
+              Python·FastAPI로 추천 모델과 리뷰 감성 분석 AI를 분리해
+              연결하는 멀티 언어 프로젝트입니다.
             </p>
           </div>
 
@@ -93,11 +108,31 @@ export default function WorkInProgress() {
             <div className="flex items-center gap-2 border-b border-white/10 pb-4">
               <Sparkles size={15} className="text-[#93c5fd]" />
               <span className="text-[0.65rem] font-black tracking-[0.16em] text-white/50">
-                PLANNED ARCHITECTURE
+                DUAL-LANGUAGE ARCHITECTURE
               </span>
             </div>
 
-            <div className="grid gap-3 py-5 sm:grid-cols-3">
+            <div className="grid gap-3 py-5 sm:grid-cols-2">
+              {languageRoles.map(({ language, role, detail, accent }) => (
+                <div
+                  key={language}
+                  className={`rounded-xl border p-4 ${accent}`}
+                >
+                  <div className="flex items-center justify-between gap-3">
+                    <strong className="display text-xl">{language}</strong>
+                    <span className="text-[0.6rem] font-black tracking-wider opacity-70">
+                      {language === 'JAVA' ? 'CORE' : 'AI'}
+                    </span>
+                  </div>
+                  <p className="mt-2 text-sm font-black text-white">{role}</p>
+                  <p className="mt-1 text-[0.65rem] leading-5 text-white/45">
+                    {detail}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div className="grid gap-3 pb-5 sm:grid-cols-3">
               {coreFeatures.map(({ icon: Icon, title, description }) => (
                 <div
                   key={title}
