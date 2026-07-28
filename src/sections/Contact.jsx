@@ -22,7 +22,7 @@ export default function Contact() {
                 <Mail size={17} /> 이메일
               </a>
               <a
-                href="tel:+821092069174"
+                href="tel:01092069174"
                 onClick={() => trackEvent('contact_click', { contact_type: 'phone' })}
                 className="inline-flex items-center gap-2 rounded-full border border-white/30 px-5 py-3 text-sm font-bold"
               >

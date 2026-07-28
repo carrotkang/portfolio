@@ -26,7 +26,7 @@ export default function Header() {
             carrotkang@gmail.com
           </a>
           <a
-            href="tel:+821092069174"
+            href="tel:01092069174"
             onClick={() => trackEvent('contact_click', { contact_type: 'header_phone' })}
             className="inline-flex items-center gap-1.5 text-white/75 transition hover:text-white"
           >
